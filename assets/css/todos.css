@@ -25,14 +25,17 @@ input {
 
 input::-webkit-input-placeholder {
     font-family: 'Gaegu';
+    font-size: 1.4em;
 }
 
 input::-ms-input-placeholder {
     font-family: 'Gaegu';
+    font-size: 1.4em;
 }
 
 input::-moz-placeholder {
     font-family: 'Gaegu';
+    font-size: 1.4em;
 }
 
 .container .list > * {
