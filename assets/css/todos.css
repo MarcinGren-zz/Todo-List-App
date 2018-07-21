@@ -1,5 +1,9 @@
+body {
+font-family: 'Gaegu';
+background: lightblue;
+}
+
 .container {
-    border: 2px solid red;
     margin: 100px auto;
     width: 20%;
 }
@@ -11,11 +15,6 @@
     padding-left: 10px;
 }
 
-/* .container * {
-    padding: 5px;
-    padding-left: 8px;
-} */
-
 input {
     box-sizing: border-box;
     width: 100%;
@@ -25,7 +24,14 @@ input {
 
 .container .list > * {
     display: block;
-    background: brown;
     padding: 5px;
     padding-left: 10px;
+}
+
+.container .list span:nth-child(even) {
+    background: gainsboro;
+}
+
+.container .list span:nth-child(odd) {
+    background: white;
 }
