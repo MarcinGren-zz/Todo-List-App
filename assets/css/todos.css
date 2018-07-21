@@ -5,7 +5,7 @@ background: lightblue;
 
 .container {
     margin: 100px auto;
-    width: 20%;
+    width: 30%;
 }
 
 .containerheader {
@@ -13,6 +13,8 @@ background: lightblue;
     color: white;
     padding: 5px;
     padding-left: 10px;
+    font-size: 2.2em;
+    font-weight: 700;
 }
 
 input {
@@ -25,17 +27,20 @@ input {
 
 input::-webkit-input-placeholder {
     font-family: 'Gaegu';
-    font-size: 1.4em;
+    font-size: 1.8em;
+    font-weight: 700;
 }
 
 input::-ms-input-placeholder {
     font-family: 'Gaegu';
-    font-size: 1.4em;
+    font-size: 1.8em;
+    font-weight: 700;
 }
 
 input::-moz-placeholder {
     font-family: 'Gaegu';
-    font-size: 1.4em;
+    font-size: 1.8em;
+    font-weight: 700;
 }
 
 .container .list > * {
@@ -50,4 +55,10 @@ input::-moz-placeholder {
 
 .container .list span:nth-child(odd) {
     background: white;
+}
+
+.fas {
+    float: right;
+    padding-right: 10px;
+    padding-top: 5px;
 }
