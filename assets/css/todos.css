@@ -1,0 +1,10 @@
+.container {
+    border: 2px solid red;
+    margin: 100px auto;
+    width: 20%;
+}
+
+.containerheader {
+    background: steelblue;
+    color: white;
+}
