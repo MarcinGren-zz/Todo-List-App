@@ -20,6 +20,19 @@ input {
     width: 100%;
     padding: 5px;
     padding-left: 10px;
+    border: none;
+}
+
+input::-webkit-input-placeholder {
+    font-family: 'Gaegu';
+}
+
+input::-ms-input-placeholder {
+    font-family: 'Gaegu';
+}
+
+input::-moz-placeholder {
+    font-family: 'Gaegu';
 }
 
 .container .list > * {
