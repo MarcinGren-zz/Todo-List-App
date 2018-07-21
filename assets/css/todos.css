@@ -8,3 +8,18 @@
     background: steelblue;
     color: white;
 }
+
+.container * {
+    padding: 5px;
+    padding-left: 8px;
+}
+
+input {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.container .list > * {
+    display: block;
+    background: brown;
+}
