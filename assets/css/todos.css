@@ -23,6 +23,8 @@ input {
     padding: 5px;
     padding-left: 10px;
     border: none;
+    height: 3em;
+    background: gainsboro;
 }
 
 input::-webkit-input-placeholder {
@@ -61,4 +63,8 @@ input::-moz-placeholder {
     float: right;
     padding-right: 10px;
     padding-top: 5px;
+}
+
+.donetask {
+    text-decoration: line-through;
 }
