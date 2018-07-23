@@ -45,16 +45,6 @@ input::-moz-placeholder {
     font-weight: 700;
 }
 
-.container .list > * {
-}
-
-.todoitem {
-    display: block;
-    padding: 5px;
-    padding-left: 10px;
-    height: 1.6em;
-}
-
 .container .list span:nth-child(even) {
     background: gainsboro;
 }
@@ -73,15 +63,34 @@ input::-moz-placeholder {
     text-decoration: line-through;
 }
 
-.list span {
+/* .list span {
     padding: 0;
-}
+} */
 
 .list span span {
     background:pink;
     padding: 4px;
 }
 
+.hidden {
+    display: none;
+}
+
 .binsignholder {
-    margin-top: 999px;
+    width: 2em;
+    height: 1.5em;
+    text-align: center;
+    background-color: red;
+    padding: 4px;
+    float: left;
+}
+
+.todoitem {
+    display: block;
+    padding: 0px;
+    padding-left: 10px;
+    height: 2em;
+}
+
+.holder {
 }
