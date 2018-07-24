@@ -1,6 +1,7 @@
 var listOfAllTodos = document.querySelectorAll(".holder")
 var listOfAllBins = document.querySelectorAll(".bin")
-
+var plusSign = document.querySelector(".fas, .fa-plus")
+var inputBox = document.querySelector("input")
 
 for (var i = 0; i < listOfAllTodos.length; i++) {
     listOfAllTodos[i].addEventListener("click", function() {
@@ -20,4 +21,8 @@ listOfAllBins.forEach(function(elem) {
     elem.addEventListener("click", function() {
         elem.parentNode.remove()
     })
+})
+
+plusSign.addEventListener("click", function() {
+    inputBox.classList.toggle("hidden")
 })
