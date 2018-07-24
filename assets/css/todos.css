@@ -61,6 +61,7 @@ input::-moz-placeholder {
 
 .donetask {
     text-decoration: line-through;
+    color: grey;
 }
 
 .hidden {
@@ -81,4 +82,5 @@ input::-moz-placeholder {
     padding: 0px;
     padding-left: 10px;
     height: 2em;
+    line-height: 30px;
 }

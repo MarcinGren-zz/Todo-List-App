@@ -1,23 +1,24 @@
-var listOfAllTodos = document.querySelectorAll(".holder")
-var listOfAllBins = document.querySelectorAll(".bin")
+var allTodos = document.querySelectorAll(".holder")
+var allBins = document.querySelectorAll(".bin")
 var plusSign = document.querySelector(".fas, .fa-plus")
 var inputBox = document.querySelector("input")
+var listOfTodos = document.querySelector(".list ")
 
-for (var i = 0; i < listOfAllTodos.length; i++) {
-    listOfAllTodos[i].addEventListener("click", function() {
+for (var i = 0; i < allTodos.length; i++) {
+    allTodos[i].addEventListener("click", function() {
         this.querySelector(".todoitem").classList.toggle("donetask")
     })
-    listOfAllTodos[i].addEventListener("mouseenter", function() {
+    allTodos[i].addEventListener("mouseenter", function() {
         this.querySelector(".bin").classList.remove("hidden")
         this.querySelector(".bin").classList.add("binsignholder")
     })
-    listOfAllTodos[i].addEventListener("mouseleave", function() {
+    allTodos[i].addEventListener("mouseleave", function() {
         this.querySelector(".bin").classList.add("hidden")
         this.querySelector(".bin").classList.remove("binsignholder")
     })
 }
 
-listOfAllBins.forEach(function(elem) {
+allBins.forEach(function(elem) {
     elem.addEventListener("click", function() {
         elem.parentNode.remove()
     })
@@ -25,4 +26,12 @@ listOfAllBins.forEach(function(elem) {
 
 plusSign.addEventListener("click", function() {
     inputBox.classList.toggle("hidden")
+})
+
+inputBox.addEventListener("keypress", function(elem) {
+    if (elem.keyCode == 13) {
+        let newDiv = document.createElement("div")
+        newDiv.append(inputBox.value)
+        listOfTodos.insertBefore(newDiv, document.querySelector(".holder"))
+    }
 })
