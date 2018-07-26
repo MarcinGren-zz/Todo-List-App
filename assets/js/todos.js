@@ -4,6 +4,25 @@ var plusSign = document.querySelector(".fas, .fa-plus")
 var inputBox = document.querySelector("input")
 var listOfTodos = document.querySelector(".list ")
 
+function createHolder() {
+    let newHolder = document.createElement("div")
+    let newBin = document.createElement("div")
+    let newIcon = document.createElement("i")
+    let newTodoItem = document.createElement("span")
+
+    newHolder.classList.add("holder")
+    newBin.classList.add("bin")    
+    newIcon.classList.add("far")
+    newIcon.classList.add("fa-trash-alt")
+    newTodoItem.classList.add("todoitem")
+    
+    newBin.appendChild(newIcon)
+    newHolder.appendChild(newBin)
+    newHolder.appendChild(newTodoItem)
+    
+    return newHolder    
+}
+
 for (var i = 0; i < allTodos.length; i++) {
     allTodos[i].addEventListener("click", function() {
         this.querySelector(".todoitem").classList.toggle("donetask")
@@ -30,8 +49,8 @@ plusSign.addEventListener("click", function() {
 
 inputBox.addEventListener("keypress", function(elem) {
     if (elem.keyCode == 13) {
-        let newDiv = document.createElement("div")
-        newDiv.append(inputBox.value)
+        let newDiv = createHolder()
+        newDiv.querySelector("span").append(inputBox.value)
         listOfTodos.insertBefore(newDiv, document.querySelector(".holder"))
     }
 })
