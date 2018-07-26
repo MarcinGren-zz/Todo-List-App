@@ -1,5 +1,5 @@
-var allTodos = document.querySelectorAll(".holder")
-var allBins = document.querySelectorAll(".bin")
+// var allTodos = document.querySelectorAll(".holder")
+// var allBins = document.querySelectorAll(".bin")
 var plusSign = document.querySelector(".fas, .fa-plus")
 var inputBox = document.querySelector("input")
 var listOfTodos = document.querySelector(".list ")
@@ -11,18 +11,21 @@ function createHolder() {
     let newTodoItem = document.createElement("span")
 
     newHolder.classList.add("holder")
-    newBin.classList.add("bin")
-    newIcon.classList.add("far")
-    newIcon.classList.add("fa-trash-alt")
+    newBin.classList.add("bin", "hidden")
+    newIcon.classList.add("far", "fa-trash-alt")
     newTodoItem.classList.add("todoitem")
 
     newBin.appendChild(newIcon)
     newHolder.appendChild(newBin)
     newHolder.appendChild(newTodoItem)
 
+
+
     return newHolder
 }
-function addListenersToTodoItems() {
+function triggerTodoListListeners() {
+    let allTodos = document.querySelectorAll(".holder")
+    let allBins = document.querySelectorAll(".bin")
     for (var i = 0; i < allTodos.length; i++) {
         allTodos[i].addEventListener("click", function () {
             this.querySelector(".todoitem").classList.toggle("donetask")
@@ -56,4 +59,5 @@ inputBox.addEventListener("keypress", function (elem) {
         newDiv.querySelector("span").append(inputBox.value)
         listOfTodos.insertBefore(newDiv, document.querySelector(".holder"))
     }
+    triggerTodoListListeners()
 })
