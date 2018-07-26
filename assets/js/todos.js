@@ -11,43 +11,46 @@ function createHolder() {
     let newTodoItem = document.createElement("span")
 
     newHolder.classList.add("holder")
-    newBin.classList.add("bin")    
+    newBin.classList.add("bin")
     newIcon.classList.add("far")
     newIcon.classList.add("fa-trash-alt")
     newTodoItem.classList.add("todoitem")
-    
+
     newBin.appendChild(newIcon)
     newHolder.appendChild(newBin)
     newHolder.appendChild(newTodoItem)
-    
-    return newHolder    
+
+    return newHolder
+}
+function addListenersToTodoItems() {
+    for (var i = 0; i < allTodos.length; i++) {
+        allTodos[i].addEventListener("click", function () {
+            this.querySelector(".todoitem").classList.toggle("donetask")
+        })
+        allTodos[i].addEventListener("mouseenter", function () {
+            this.querySelector(".bin").classList.remove("hidden")
+            this.querySelector(".bin").classList.add("binsignholder")
+        })
+        allTodos[i].addEventListener("mouseleave", function () {
+            this.querySelector(".bin").classList.add("hidden")
+            this.querySelector(".bin").classList.remove("binsignholder")
+        })
+    }
+
+    allBins.forEach(function (elem) {
+        elem.addEventListener("click", function () {
+            elem.parentNode.remove()
+        })
+    })
 }
 
-for (var i = 0; i < allTodos.length; i++) {
-    allTodos[i].addEventListener("click", function() {
-        this.querySelector(".todoitem").classList.toggle("donetask")
-    })
-    allTodos[i].addEventListener("mouseenter", function() {
-        this.querySelector(".bin").classList.remove("hidden")
-        this.querySelector(".bin").classList.add("binsignholder")
-    })
-    allTodos[i].addEventListener("mouseleave", function() {
-        this.querySelector(".bin").classList.add("hidden")
-        this.querySelector(".bin").classList.remove("binsignholder")
-    })
-}
 
-allBins.forEach(function(elem) {
-    elem.addEventListener("click", function() {
-        elem.parentNode.remove()
-    })
-})
 
-plusSign.addEventListener("click", function() {
+plusSign.addEventListener("click", function () {
     inputBox.classList.toggle("hidden")
 })
 
-inputBox.addEventListener("keypress", function(elem) {
+inputBox.addEventListener("keypress", function (elem) {
     if (elem.keyCode == 13) {
         let newDiv = createHolder()
         newDiv.querySelector("span").append(inputBox.value)
