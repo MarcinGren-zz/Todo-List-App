@@ -1,4 +1,4 @@
-// var allTodos = document.querySelectorAll(".holder")
+// var allTodos = document.querySelectorAll(".holder") temporary disabled, i dont think i need them here
 // var allBins = document.querySelectorAll(".bin")
 var plusSign = document.querySelector(".fas, .fa-plus")
 var inputBox = document.querySelector("input")
@@ -18,8 +18,6 @@ function createHolder() {
     newBin.appendChild(newIcon)
     newHolder.appendChild(newBin)
     newHolder.appendChild(newTodoItem)
-
-
 
     return newHolder
 }
