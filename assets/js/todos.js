@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-// var allTodos = document.querySelectorAll(".holder") temporary disabled, i dont think i need them here
-// var allBins = document.querySelectorAll(".bin")
-=======
 var allTodos = Array.prototype.slice.call(document.querySelectorAll(".holder"))
 var allBins = Array.prototype.slice.call(document.querySelectorAll(".bin"))
->>>>>>> 45bb449a8b904ea2b7fd37a4a8057216d43d3a2b
 var plusSign = document.querySelector(".fas, .fa-plus")
 var inputBox = document.querySelector("input")
 var listOfTodos = document.querySelector(".list ")
@@ -24,12 +19,9 @@ function createHolder() {
     newHolder.appendChild(newBin)
     newHolder.appendChild(newTodoItem)
 
-<<<<<<< HEAD
-=======
     allTodos.push(newHolder)
     allBins.push(newBin)
 
->>>>>>> 45bb449a8b904ea2b7fd37a4a8057216d43d3a2b
     return newHolder
 }
 
