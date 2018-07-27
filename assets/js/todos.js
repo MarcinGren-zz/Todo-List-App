@@ -1,5 +1,5 @@
-// var allTodos = document.querySelectorAll(".holder")
-// var allBins = document.querySelectorAll(".bin")
+var allTodos = Array.prototype.slice.call(document.querySelectorAll(".holder"))
+var allBins = Array.prototype.slice.call(document.querySelectorAll(".bin"))
 var plusSign = document.querySelector(".fas, .fa-plus")
 var inputBox = document.querySelector("input")
 var listOfTodos = document.querySelector(".list ")
@@ -19,13 +19,15 @@ function createHolder() {
     newHolder.appendChild(newBin)
     newHolder.appendChild(newTodoItem)
 
-
+    allTodos.push(newHolder)
+    allBins.push(newBin)
 
     return newHolder
 }
+
 function triggerTodoListListeners() {
-    let allTodos = document.querySelectorAll(".holder")
-    let allBins = document.querySelectorAll(".bin")
+    // let allTodos = document.querySelectorAll(".holder")
+    // let allBins = document.querySelectorAll(".bin")
     for (var i = 0; i < allTodos.length; i++) {
         allTodos[i].addEventListener("click", function () {
             this.querySelector(".todoitem").classList.toggle("donetask")
@@ -46,8 +48,6 @@ function triggerTodoListListeners() {
         })
     })
 }
-
-
 
 plusSign.addEventListener("click", function () {
     inputBox.classList.toggle("hidden")
