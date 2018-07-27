@@ -58,6 +58,7 @@ inputBox.addEventListener("keypress", function (elem) {
         let newDiv = createHolder()
         newDiv.querySelector("span").append(inputBox.value)
         listOfTodos.insertBefore(newDiv, document.querySelector(".holder"))
+        inputBox.value = ''
     }
     triggerTodoListListeners()
 })
