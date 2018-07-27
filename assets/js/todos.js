@@ -61,3 +61,5 @@ inputBox.addEventListener("keypress", function (elem) {
     }
     triggerTodoListListeners()
 })
+
+triggerTodoListListeners()
