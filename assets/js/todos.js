@@ -26,8 +26,6 @@ function createHolder() {
 }
 
 function triggerTodoListListeners() {
-    // let allTodos = document.querySelectorAll(".holder")
-    // let allBins = document.querySelectorAll(".bin")
     for (var i = 0; i < allTodos.length; i++) {
         allTodos[i].addEventListener("click", function () {
             this.querySelector(".todoitem").classList.toggle("donetask")
