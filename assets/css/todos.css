@@ -1,6 +1,8 @@
 body {
     font-family: 'Gaegu';
+    /* fallback */
     background: lightblue;
+    background: linear-gradient(to right, #f3904f, #3b4371);
 }
 
 .container {
